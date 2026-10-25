@@ -1,0 +1,25 @@
+{
+  "name": "@micuintus/loop-driver",
+  "version": "1.0.0",
+  "description": "Loop-driver contract for Pi extensions: stack a follow-up turn after each agent run, or stay idle.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Michael Voigt (micu) <micuintus@gmx.de>",
+  "repository": { "type": "git", "url": "git+https://github.com/micuintus/loop-driver.git" },
+  "exports": { ".": "./index.ts" },
+  "files": ["index.ts", "README.md", "LICENSE"],
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "tsx test/loop-driver.test.ts"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.4.0",
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3"
+  }
+}

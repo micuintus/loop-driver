@@ -67,7 +67,3 @@ export function attachLoopDriver(pi: ExtensionAPI, driver: LoopDriver): void {
 		}
 	});
 }
-
-export default function (_pi: ExtensionAPI) {
-	// Consumers call attachLoopDriver(pi, driver).
-}

@@ -1,17 +1,8 @@
 import { strict as assert } from "node:assert";
-import baseFactory from "../packages/base/index.js";
-import { attachLoopDriver } from "../packages/base/index.js";
+import { attachLoopDriver } from "../index.ts";
 
 assert.equal(typeof attachLoopDriver, "function");
 console.log("✓ attachLoopDriver exported");
-
-const mockPi = {
-	on: () => {},
-	registerCommand: () => {},
-} as unknown as import("@earendil-works/pi-coding-agent").ExtensionAPI;
-
-baseFactory(mockPi);
-console.log("✓ Base extension factory loads without error");
 
 // attachLoopDriver forwards the agent_end event (incl. its per-run messages) to
 // iterate — the contract the evolve watchdog's spawn-detection relies on.
@@ -59,4 +50,4 @@ console.log("✓ Base extension factory loads without error");
 	console.log("✓ attachLoopDriver breaks the loop on a provider error");
 }
 
-console.log("\n🎉 Base minimal tests passed.");
+console.log("\n🎉 loop-driver tests passed.");
