@@ -1,7 +1,7 @@
 # loop-driver
 
 The loop-driver contract shared by
-[LedgerEvolve](https://github.com/micuintus/ledgerevolve) and
+[AIDEvolve](https://github.com/micuintus/aid-evolve) and
 [EnforcedTodo](https://github.com/micuintus/enforced-todo): after each
 agent run, a driver either stacks a follow-up turn or stays idle.
 
